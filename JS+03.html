@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JS 03</title>
+</head>
+<body>
+	<div id="output"></div>
+	<script>
+		var atBats = 300;
+		var hits = 65;
+		var singles = 50;
+		var doubles = 5;
+		var triples = 3;
+		var homeruns = 7;
+		var walks = 22;
+
+		var output = "";
+
+		var battingAverage = hits / (atBats - walks);
+		output += "Batting Average: " + battingAverage;
+
+		var onBasePercentage = (hits + walks) / atBats;
+		output += "<br/>On Base Percentage: " + onBasePercentage;
+
+		var totalBases = singles + (doubles * 2) + (triples * 3) + (homeruns * 4);
+		output += "<br/>Total Bases: " + totalBases;
+
+		document.getElementById('output').innerHTML = output;
+	</script>
+</body>
+</html>

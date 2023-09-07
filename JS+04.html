@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JS 04</title>
+</head>
+<body>
+	<div id="output"></div>
+	<script>
+		// var membershipFee = 500;
+		var amount = parseInt(prompt("how much did you spend this month in additional charges?"));
+		let membershipFee= 500;	
+		let discount1 = "20%";
+		var discount1digit = 0.2;
+		var discount1Final = Subtotal-(Subtotal * 2);
+		let discount2 = "15%";
+		let discount3 = "12.5%";
+		let discount4 = "10%";
+		let tax = "$72.10";
+		var Subtotal = amount + membershipFee;
+		
+		if(amount >= 2001){
+			document.getElementById('output').innerHTML += "MembershipFee $" + membershipFee + "<br/> Additional Fees $"  
+			+ amount + "<br/><br/> Subtotal $"  + Subtotal + "<br/> Discount $"  + discount1 + "<br/><br/> Final Fee Bill $"  
+			+ "" + "<br/> Tax "  + tax + "<br/><br/> Grand Total $" + "";
+		}else if(amount >= 1001){
+			document.getElementById('output').innerHTML += "MembershipFee $" + membershipFee + "<br/> Additional Fees $"  
+			+ amount + "<br/><br/> Subtotal $"  + Subtotal + "<br/> Discount $"  + discount2 + "<br/><br/> Final Fee Bill $"  
+			+ discount1Final + "<br/> Tax "  + tax + "<br/><br/> Grand Total $" + "";
+		}else if(amount >= 501){
+			document.getElementById('output').innerHTML += "MembershipFee $" + membershipFee + "<br/> Additional Fees $"  
+			+ amount + "<br/><br/> Subtotal $"  + Subtotal + "<br/> Discount $"  + discount3 + "<br/><br/> Final Fee Bill $"  
+			+ discount1Final + "<br/> Tax "  + tax + "<br/><br/> Grand Total $" + "";
+		}else if(amount >= 250){
+			document.getElementById('output').innerHTML += "MembershipFee $" + membershipFee + "<br/> Additional Fees $"  
+			+ amount + "<br/><br/> Subtotal $"  + Subtotal + "<br/> Discount $"  + discount4 + "<br/><br/> Final Fee Bill $"  
+			+ discount1Final + "<br/> Tax "  + tax + "<br/><br/> Grand Total $" + "";
+		}else if(amount <= 249){
+			document.getElementById('output').innerHTML += "Please!!! <br/> Your bill should be $250 and above";
+		}
+		
+	</script>
+</body>
+</html>
